@@ -1,0 +1,33 @@
+services:
+  vm1:
+    build:
+      context: .
+      args:
+        CONFIG_DIR: dns
+    container_name: vm1
+    privileged: true
+    command: sleep infinity
+    networks:
+      vnet1:
+        ipv4_address: 192.168.102.10
+  
+  vm2:
+    build:
+      context: .
+      args:
+        CONFIG_DIR: secondary-dns
+    container_name: vm2
+    privileged: true
+    command: sleep infinity
+    networks:
+      vnet1:
+        ipv4_address: 192.168.102.20
+
+
+networks:
+  vnet1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.102.0/24
+          gateway: 192.168.102.1

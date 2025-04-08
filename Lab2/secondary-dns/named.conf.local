@@ -1,0 +1,17 @@
+zone "planet.edu" {
+    type slave;
+    file "/var/cache/bind/db.planet.edu";
+    masters { 192.168.102.10; };
+};
+
+zone "zone02.org" {
+    type slave;
+    file "/var/cache/bind/db.zone02.org";
+    masters { 192.168.102.10; };
+};
+
+zone "11.168.192.in-addr.arpa" {
+    type slave;
+    file "/var/cache/bind/db.192.168.11";
+    masters { 192.168.102.10; };
+};
