@@ -1,0 +1,19 @@
+$TTL    604800
+@       IN      SOA     ns1.planet.edu. admin.planet.edu. (
+                              1         ; серійний номер
+                         604800         ; refresh
+                          86400         ; retry
+                        2419200         ; expire
+                         604800 )       ; negative caching TTL
+;
+@       IN      NS      ns1.planet.edu.
+@       IN      NS      ns2.planet.edu.
+ns1     IN      A       192.168.102.10
+ns2     IN      A       192.168.102.20
+
+; PTR записи для ресурсів
+21      IN      PTR     mercury.planet.edu.
+22      IN      PTR     venus.planet.edu.
+23      IN      PTR     earth.planet.edu.
+24      IN      PTR     saturn.planet.edu.
+25      IN      PTR     jupiter.planet.edu.
