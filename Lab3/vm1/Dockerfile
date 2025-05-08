@@ -3,7 +3,7 @@ ARG CONFIG_DIR
 ARG CA_DIR
 ARG MAIL_HOSTNAME
 ENV DEBIAN_FRONTEND=noninteractive
-ENV HOSTNAME=${MAIL_HOSTNAME}
+ENV HOSTNAME = ${MAIL_HOSTNAME}
 
 RUN apt-get update && apt-get install -y \
     dnsutils \
@@ -32,4 +32,3 @@ COPY ${CONFIG_DIR}/setup.sh .
 EXPOSE 25 465 587 993 995
 RUN chmod +x setup.sh
 ENTRYPOINT [ "./setup.sh" ]
-    

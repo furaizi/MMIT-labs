@@ -1,13 +1,13 @@
 $TTL    604800
-@       IN      SOA     ns1.zone02.org. admin.zone02.org. (
-                              1         ; серійний номер
+@       IN      SOA     ns1.planet.edu. admin.planet.edu. (
+                              2         ; серійний номер
                          604800         ; refresh
                           86400         ; retry
                         2419200         ; expire
                          604800 )       ; negative caching TTL
 
-@       IN      NS      ns1.zone02.org.
-@       IN      NS      ns2.zone02.org.
+@       IN      NS      ns1.planet.edu.
+@       IN      NS      ns2.planet.edu.
 ns1     IN      A       192.168.102.10
 ns2     IN      A       192.168.102.20
 
@@ -18,9 +18,12 @@ earth       IN      A       192.168.11.23
 saturn      IN      A       192.168.11.24
 jupiter     IN      A       192.168.11.25
 
+mail        IN      A       192.168.102.10
+@           IN      MX 10   mail.planet.edu.
+
 ; CNAME записи (псевдоніми)
-srv1        IN      CNAME   mercury.zone02.org.
-srv2        IN      CNAME   venus.zone02.org.
-srv3        IN      CNAME   earth.zone02.org.
-srv4        IN      CNAME   saturn.zone02.org.
-srv5        IN      CNAME   jupiter.zone02.org.
+srv1        IN      CNAME   mercury.planet.edu.
+srv2        IN      CNAME   venus.planet.edu.
+srv3        IN      CNAME   earth.planet.edu.
+srv4        IN      CNAME   saturn.planet.edu.
+srv5        IN      CNAME   jupiter.planet.edu.

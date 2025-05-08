@@ -3,7 +3,9 @@ services:
     build:
       context: .
       args:
-        CONFIG_DIR: dns
+        CONFIG_DIR: vm1
+        CA_DIR: /root/planetCA
+        MAIL_HOSTNAME: mail.planet.edu
     container_name: vm1
     privileged: true
     command: sleep infinity
@@ -15,7 +17,8 @@ services:
     build:
       context: .
       args:
-        CONFIG_DIR: secondary-dns
+        CONFIG_DIR: vm2
+        MAIL_HOSTNAME: mail.zone02.org
     container_name: vm2
     privileged: true
     command: sleep infinity

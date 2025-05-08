@@ -1,0 +1,37 @@
+# Общие
+myhostname = mail.planet.edu
+mydomain   = planet.edu
+myorigin   = $mydomain
+mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+
+# Откуда слушать
+inet_interfaces = all
+inet_protocols = ipv4
+
+# Пользовательская доставка в домашние папки (Maildir)
+home_mailbox = Maildir/
+
+# Ограничения
+smtpd_recipient_restrictions =
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_unauth_destination
+
+# Работа с очередью
+queue_directory = /var/spool/postfix
+
+# Логи и метки
+mailbox_size_limit = 0
+recipient_delimiter = +
+
+smtpd_use_tls = yes
+smtpd_tls_cert_file = /etc/ssl/local/mail.planet.edu.crt
+smtpd_tls_key_file  = /etc/ssl/local/mail.planet.edu.key
+smtpd_tls_CAfile    = /etc/postfix/ssl/ca.crt
+smtpd_tls_security_level = may
+
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_local_domain = $mydomain

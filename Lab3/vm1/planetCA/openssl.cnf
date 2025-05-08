@@ -1,0 +1,23 @@
+[ ca ]
+default_ca      = CA_default
+
+[ CA_default ]
+dir             = /root/planetCA
+certs           = $dir/certs
+crl_dir         = $dir/crl
+database        = $dir/index.txt
+new_certs_dir   = $dir/newcerts
+certificate     = $dir/certs/planet-ca.crt
+private_key     = $dir/private/planet-ca.key
+default_md      = sha256
+policy          = policy_anything
+default_days    = 3650
+unique_subject  = no
+
+[ policy_anything ]
+countryName             = supplied
+stateOrProvinceName     = optional
+localityName            = optional
+organizationName        = optional
+organizationalUnitName  = optional
+commonName              = supplied

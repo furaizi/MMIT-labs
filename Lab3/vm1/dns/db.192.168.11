@@ -1,6 +1,6 @@
 $TTL    604800
 @       IN      SOA     ns1.planet.edu. admin.planet.edu. (
-                              1         ; серійний номер
+                              2         ; серійний номер
                          604800         ; refresh
                           86400         ; retry
                         2419200         ; expire

@@ -1,0 +1,121 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4096 (0x1000)
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=UA, ST=Ukraine, L=Kyiv, O=KPI, OU=OT, CN=planet CA
+        Validity
+            Not Before: May  7 21:23:41 2025 GMT
+            Not After : Aug 10 21:23:41 2027 GMT
+        Subject: C=UA, ST=Ukraine, L=Kyiv, O=KPI, OU=OT, CN=mail.planet.edu
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (4096 bit)
+                Modulus:
+                    00:bc:50:75:2f:65:02:aa:20:6d:9f:d3:4c:29:41:
+                    57:3e:f1:a6:eb:27:eb:59:43:48:f3:06:79:53:63:
+                    db:a2:2c:eb:70:db:ab:ed:c0:b2:c0:38:1b:a8:22:
+                    44:d8:ad:c5:8f:f4:04:f0:05:eb:a6:34:e3:a7:7f:
+                    e1:88:bb:76:f7:e4:f6:a4:0b:61:fe:65:a1:29:92:
+                    e9:05:89:d7:b0:0b:ca:c1:56:7b:9a:50:5c:92:7d:
+                    78:ae:15:b5:f3:38:ad:fa:51:7c:a9:c2:c7:db:4d:
+                    68:93:17:f1:51:9d:7a:ba:7f:c7:5e:79:16:a3:4a:
+                    23:1a:2d:5c:f0:a8:0b:7f:f7:5c:3c:e1:46:9b:bd:
+                    89:88:69:c8:6d:86:f9:77:56:22:8a:1d:71:5a:a0:
+                    65:58:f7:78:78:d8:9e:8f:56:04:f9:a5:1b:2e:2e:
+                    9c:e9:15:cb:fe:47:26:bc:44:35:d7:3e:7e:21:8f:
+                    f0:f4:50:bc:68:b9:84:55:79:c5:a5:62:67:63:03:
+                    47:79:3b:d2:90:84:eb:63:38:29:af:fa:6a:33:9a:
+                    59:64:3e:a1:66:7c:74:13:76:44:78:85:b2:08:96:
+                    af:9e:65:68:34:3b:06:8e:29:f9:fa:3f:0d:c5:5f:
+                    fc:58:42:66:34:5c:da:12:48:f7:54:d9:59:c8:a4:
+                    c2:e8:9f:87:7f:45:ed:c5:60:2e:bf:87:13:47:5d:
+                    c9:f5:31:31:5a:85:40:16:e1:35:89:c8:59:1a:4f:
+                    59:93:05:d6:fe:21:6c:14:fb:ed:cb:af:a3:e4:bf:
+                    c6:4e:b1:15:47:2b:47:07:6f:2f:98:67:6d:99:c9:
+                    84:27:ca:07:47:30:da:22:31:64:3c:50:cf:f6:18:
+                    bc:d4:12:25:36:23:df:29:11:60:bc:c6:fb:ab:56:
+                    3e:1d:a3:45:0e:1f:88:49:6a:f1:2f:ab:b7:ef:6b:
+                    c8:35:aa:bb:81:84:fd:23:b4:12:f9:da:13:0b:d0:
+                    56:5c:2a:a0:db:48:cd:ed:64:df:41:31:28:45:1c:
+                    52:8e:73:32:37:17:36:1a:77:fe:5f:cd:3e:38:3f:
+                    87:cd:56:b2:c3:fd:1b:7c:21:3f:cd:7d:ca:7c:c5:
+                    7e:e9:73:e4:b9:ff:05:03:e0:cd:9f:73:3e:dd:46:
+                    79:d8:c3:a6:a8:99:08:f3:33:f0:c5:ca:70:8d:32:
+                    91:cb:4e:9c:68:a9:cb:ed:68:1f:e9:51:8b:a1:dc:
+                    82:59:53:30:93:a9:08:fd:3c:19:65:29:2e:40:c9:
+                    87:ec:c6:1c:0b:81:08:4d:b9:57:fa:17:28:0b:9f:
+                    80:3c:0d:ff:2a:9d:76:51:82:d2:b9:bd:27:2a:39:
+                    07:5f:b1
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Alternative Name: 
+                DNS:mail.planet.edu, DNS:planet.edu
+            X509v3 Subject Key Identifier: 
+                20:B1:17:62:D8:69:46:9C:5C:C2:F9:14:A2:45:C5:73:63:36:4B:90
+            X509v3 Authority Key Identifier: 
+                E3:B6:47:56:F9:A6:02:05:58:4F:78:43:C8:17:BA:43:F3:0B:06:D4
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        0e:a4:40:05:b5:d0:40:b7:bb:6c:95:65:16:1e:aa:36:52:ea:
+        07:c6:4a:16:06:34:94:5c:70:9b:bc:a3:de:e1:3c:f3:aa:74:
+        dc:8f:77:fa:ac:ea:62:09:cb:86:8b:3c:60:8c:30:b7:7d:29:
+        db:94:15:07:62:ae:05:09:75:16:55:30:93:69:85:79:e3:7c:
+        61:6b:54:af:a9:ba:85:d6:67:94:1e:d1:0f:73:99:9d:2c:a0:
+        e6:62:8e:61:21:09:17:7a:a2:5b:2f:99:d2:1a:8c:ef:dd:74:
+        50:32:2e:9f:b9:5d:50:7c:e4:87:2d:5d:70:49:4a:dc:24:05:
+        92:a6:26:51:b3:9b:67:19:da:f4:43:85:cd:91:31:cb:e2:db:
+        25:63:be:3b:08:40:62:a1:2a:05:64:43:33:ea:84:5a:26:7e:
+        56:6e:58:18:93:24:04:4b:66:93:8f:14:ee:98:a4:b0:02:bc:
+        81:cf:f1:d6:20:b1:8f:6b:b4:47:5d:c6:29:24:a9:b4:a0:09:
+        28:d7:dd:c6:ab:14:6c:34:40:44:e8:99:4c:b3:19:26:2d:0f:
+        ea:55:c1:d0:2d:39:4f:91:40:ea:ba:4a:2d:5f:24:3a:1f:bc:
+        81:5f:d3:9d:6c:f8:fe:ef:dd:5a:26:d0:72:2d:3e:00:d3:99:
+        88:9c:be:4f:db:d6:b8:9b:a6:87:dc:6d:24:79:cb:8e:84:f3:
+        c8:97:f8:01:1b:13:46:3a:77:65:ef:fa:e3:af:5a:c1:51:9c:
+        6e:56:3f:15:a1:36:fe:08:58:d8:8f:0e:8b:36:93:47:a4:2d:
+        bc:99:3c:b6:5f:f3:a4:b0:1a:05:53:ed:e7:32:da:15:99:05:
+        77:4f:0b:97:e7:7e:64:fa:85:cc:db:1d:86:b4:2c:54:d0:f0:
+        aa:4d:36:a0:4f:d6:47:f0:fc:01:94:e2:7a:05:5e:1c:fa:b5:
+        02:78:18:98:74:62:5c:ad:61:f9:12:a3:36:ee:e0:17:25:87:
+        0c:a1:30:23:61:68:f9:e3:b0:75:1c:60:7c:cf:10:6c:52:49:
+        dc:cc:b7:59:9a:d3:5b:08:bf:ec:48:a7:b1:7c:b5:fb:db:2c:
+        1c:8d:bb:4f:6d:ff:ad:66:bd:dd:fd:91:f1:53:d7:0c:38:9e:
+        05:49:eb:7f:6f:b2:22:b4:99:dd:88:84:e3:70:56:ef:6e:47:
+        4e:79:4e:54:81:28:14:da:59:d4:42:82:d0:f1:41:2d:56:2d:
+        a6:5a:e6:5f:e4:79:13:a8:7f:90:8a:52:b4:88:91:0d:30:f5:
+        f2:c1:2b:df:28:3b:9c:56:89:39:18:26:ca:5d:45:65:d5:70:
+        b2:4d:96:99:5c:14:8d:9d
+-----BEGIN CERTIFICATE-----
+MIIFpjCCA46gAwIBAgICEAAwDQYJKoZIhvcNAQELBQAwXTELMAkGA1UEBhMCVUEx
+EDAOBgNVBAgMB1VrcmFpbmUxDTALBgNVBAcMBEt5aXYxDDAKBgNVBAoMA0tQSTEL
+MAkGA1UECwwCT1QxEjAQBgNVBAMMCXBsYW5ldCBDQTAeFw0yNTA1MDcyMTIzNDFa
+Fw0yNzA4MTAyMTIzNDFaMGMxCzAJBgNVBAYTAlVBMRAwDgYDVQQIDAdVa3JhaW5l
+MQ0wCwYDVQQHDARLeWl2MQwwCgYDVQQKDANLUEkxCzAJBgNVBAsMAk9UMRgwFgYD
+VQQDDA9tYWlsLnBsYW5ldC5lZHUwggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIK
+AoICAQC8UHUvZQKqIG2f00wpQVc+8abrJ+tZQ0jzBnlTY9uiLOtw26vtwLLAOBuo
+IkTYrcWP9ATwBeumNOOnf+GIu3b35PakC2H+ZaEpkukFidewC8rBVnuaUFySfXiu
+FbXzOK36UXypwsfbTWiTF/FRnXq6f8deeRajSiMaLVzwqAt/91w84UabvYmIacht
+hvl3ViKKHXFaoGVY93h42J6PVgT5pRsuLpzpFcv+Rya8RDXXPn4hj/D0ULxouYRV
+ecWlYmdjA0d5O9KQhOtjOCmv+mozmllkPqFmfHQTdkR4hbIIlq+eZWg0OwaOKfn6
+Pw3FX/xYQmY0XNoSSPdU2VnIpMLon4d/Re3FYC6/hxNHXcn1MTFahUAW4TWJyFka
+T1mTBdb+IWwU++3Lr6Pkv8ZOsRVHK0cHby+YZ22ZyYQnygdHMNoiMWQ8UM/2GLzU
+EiU2I98pEWC8xvurVj4do0UOH4hJavEvq7fva8g1qruBhP0jtBL52hML0FZcKqDb
+SM3tZN9BMShFHFKOczI3FzYad/5fzT44P4fNVrLD/Rt8IT/Nfcp8xX7pc+S5/wUD
+4M2fcz7dRnnYw6aomQjzM/DFynCNMpHLTpxoqcvtaB/pUYuh3IJZUzCTqQj9PBll
+KS5AyYfsxhwLgQhNuVf6FygLn4A8Df8qnXZRgtK5vScqOQdfsQIDAQABo2owaDAm
+BgNVHREEHzAdgg9tYWlsLnBsYW5ldC5lZHWCCnBsYW5ldC5lZHUwHQYDVR0OBBYE
+FCCxF2LYaUacXML5FKJFxXNjNkuQMB8GA1UdIwQYMBaAFOO2R1b5pgIFWE94Q8gX
+ukPzCwbUMA0GCSqGSIb3DQEBCwUAA4ICAQAOpEAFtdBAt7tslWUWHqo2UuoHxkoW
+BjSUXHCbvKPe4TzzqnTcj3f6rOpiCcuGizxgjDC3fSnblBUHYq4FCXUWVTCTaYV5
+43xha1SvqbqF1meUHtEPc5mdLKDmYo5hIQkXeqJbL5nSGozv3XRQMi6fuV1QfOSH
+LV1wSUrcJAWSpiZRs5tnGdr0Q4XNkTHL4tslY747CEBioSoFZEMz6oRaJn5WblgY
+kyQES2aTjxTumKSwAryBz/HWILGPa7RHXcYpJKm0oAko193GqxRsNEBE6JlMsxkm
+LQ/qVcHQLTlPkUDqukotXyQ6H7yBX9OdbPj+791aJtByLT4A05mInL5P29a4m6aH
+3G0kecuOhPPIl/gBGxNGOndl7/rjr1rBUZxuVj8VoTb+CFjYjw6LNpNHpC28mTy2
+X/OksBoFU+3nMtoVmQV3TwuX535k+oXM2x2GtCxU0PCqTTagT9ZH8PwBlOJ6BV4c
++rUCeBiYdGJcrWH5EqM27uAXJYcMoTAjYWj547B1HGB8zxBsUknczLdZmtNbCL/s
+SKexfLX72ywcjbtPbf+tZr3d/ZHxU9cMOJ4FSet/b7IitJndiITjcFbvbkdOeU5U
+gSgU2lnUQoLQ8UEtVi2mWuZf5HkTqH+QilK0iJENMPXywSvfKDucVok5GCbKXUVl
+1XCyTZaZXBSNnQ==
+-----END CERTIFICATE-----
