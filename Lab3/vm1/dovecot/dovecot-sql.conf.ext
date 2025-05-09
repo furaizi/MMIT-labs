@@ -29,7 +29,12 @@
 # );
 
 # Database driver: mysql, pgsql, sqlite
-#driver = 
+driver = mysql
+connect = host=127.0.0.1 dbname=mailserver user=mailuser password=secret
+default_pass_scheme = SHA512-CRYPT
+password_query = SELECT username AS user, password FROM users WHERE username = '%u';
+user_query = SELECT home, uid, gid FROM users WHERE username = '%u';
+
 
 # Database connection string. This is driver-specific setting.
 #

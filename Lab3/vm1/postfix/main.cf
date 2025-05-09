@@ -1,8 +1,9 @@
 # Общие
 myhostname = mail.planet.edu
 mydomain   = planet.edu
-myorigin   = $mydomain
-mydestination = $myhostname, localhost.$mydomain, localhost, $mydomain
+myorigin   = planet.edu
+mydestination = mail.planet.edu, localhost.planet.edu, localhost
+mailname   = mail.planet.edu
 
 # Откуда слушать
 inet_interfaces = all
@@ -23,15 +24,25 @@ queue_directory = /var/spool/postfix
 # Логи и метки
 mailbox_size_limit = 0
 recipient_delimiter = +
+mailbox_transport = lmtp:unix:private/dovecot-lmtp
+
+virtual_mailbox_domains = planet.edu
+virtual_mailbox_base    = /var/mail/vhosts
+virtual_mailbox_maps    = hash:/etc/postfix/vmailbox
+virtual_minimum_uid     = 100
+virtual_uid_maps        = static:5000      # например, uid=vmail:5000
+virtual_gid_maps        = static:5000      # gid=vmail:5000
+virtual_transport       = lmtp:unix:private/dovecot-lmtp
 
 smtpd_use_tls = yes
 smtpd_tls_cert_file = /etc/ssl/local/mail.planet.edu.crt
 smtpd_tls_key_file  = /etc/ssl/local/mail.planet.edu.key
 smtpd_tls_CAfile    = /etc/postfix/ssl/ca.crt
 smtpd_tls_security_level = may
+smtp_tls_security_level = may
 
 smtpd_sasl_type = dovecot
 smtpd_sasl_path = private/auth
 smtpd_sasl_auth_enable = yes
 smtpd_sasl_security_options = noanonymous
-smtpd_sasl_local_domain = $mydomain
+smtpd_sasl_local_domain = planet.edu

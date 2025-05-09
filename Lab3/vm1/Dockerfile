@@ -3,7 +3,7 @@ ARG CONFIG_DIR
 ARG CA_DIR
 ARG MAIL_HOSTNAME
 ENV DEBIAN_FRONTEND=noninteractive
-ENV HOSTNAME = ${MAIL_HOSTNAME}
+ENV HOSTNAME=${MAIL_HOSTNAME}
 
 RUN apt-get update && apt-get install -y \
     dnsutils \
@@ -26,6 +26,7 @@ RUN echo "postfix postfix/mailname string ${MAIL_HOSTNAME}" | debconf-set-select
 
 COPY ${CONFIG_DIR}/dns /etc/bind
 COPY ${CONFIG_DIR}/certs /etc/ssl/local
+COPY ${CONFIG_DIR}/dovecot /etc/dovecot
 
 WORKDIR /usr/local/bin
 COPY ${CONFIG_DIR}/setup.sh . 

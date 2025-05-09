@@ -26,10 +26,12 @@ RUN echo "postfix postfix/mailname string ${MAIL_HOSTNAME}" | debconf-set-select
 
 COPY ${CONFIG_DIR}/dns /etc/bind
 COPY ${CONFIG_DIR}/certs /etc/ssl/local
+COPY ${CONFIG_DIR}/postfix /etc/postfix
+COPY ${CONFIG_DIR}/dovecot /etc/dovecot
 
 WORKDIR /usr/local/bin
 COPY ${CONFIG_DIR}/setup.sh . 
 EXPOSE 25 465 587 993 995
 RUN chmod +x setup.sh
-ENTRYPOINT [ "./setup.sh" ]
+# ENTRYPOINT [ "./setup.sh" ]
     
