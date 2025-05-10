@@ -6,6 +6,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 ENV HOSTNAME=${MAIL_HOSTNAME}
 
 RUN apt-get update && apt-get install -y \
+    rsyslog \
+    telnet \
     dnsutils \
     bind9 \
     bind9utils \

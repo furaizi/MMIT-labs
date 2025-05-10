@@ -37,7 +37,7 @@ virtual_transport       = lmtp:unix:private/dovecot-lmtp
 smtpd_use_tls = yes
 smtpd_tls_cert_file = /etc/ssl/local/mail.planet.edu.crt
 smtpd_tls_key_file  = /etc/ssl/local/mail.planet.edu.key
-smtpd_tls_CAfile    = /etc/postfix/ssl/ca.crt
+smtpd_tls_CAfile    = /etc/ssl/local/planet-ca.crt
 smtpd_tls_security_level = may
 smtp_tls_security_level = may
 
