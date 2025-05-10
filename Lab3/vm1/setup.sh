@@ -25,3 +25,5 @@ useradd  --system --uid 5000 --gid vmail \
          --home-dir /var/mail/vhosts --shell /usr/sbin/nologin vmail
 chown -R vmail:vmail /var/mail/vhosts
 chmod -R 700 /var/mail/vhosts
+
+exec "$@"

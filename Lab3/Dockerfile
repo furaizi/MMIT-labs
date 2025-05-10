@@ -35,5 +35,5 @@ WORKDIR /usr/local/bin
 COPY ${CONFIG_DIR}/setup.sh . 
 EXPOSE 25 465 587 993 995
 RUN chmod +x setup.sh
-# ENTRYPOINT [ "./setup.sh" ]
-    
+ENTRYPOINT [ "./setup.sh" ]
+CMD [ "sleep", "infinity" ]

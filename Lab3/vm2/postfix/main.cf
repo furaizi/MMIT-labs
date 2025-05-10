@@ -1,0 +1,48 @@
+# Общие
+myhostname = mail.zone02.org
+mydomain   = zone02.org
+myorigin   = zone02.org
+mydestination = mail.zone02.org, localhost.zone02.org, localhost
+mailname   = mail.zone02.org
+
+# Откуда слушать
+inet_interfaces = all
+inet_protocols = ipv4
+
+# Пользовательская доставка в домашние папки (Maildir)
+home_mailbox = Maildir/
+
+# Ограничения
+smtpd_recipient_restrictions =
+    permit_mynetworks,
+    permit_sasl_authenticated,
+    reject_unauth_destination
+
+# Работа с очередью
+queue_directory = /var/spool/postfix
+
+# Логи и метки
+mailbox_size_limit = 0
+recipient_delimiter = +
+mailbox_transport = lmtp:unix:private/dovecot-lmtp
+
+virtual_mailbox_domains = zone02.org
+virtual_mailbox_base    = /var/mail/vhosts
+virtual_mailbox_maps    = hash:/etc/postfix/vmailbox
+virtual_minimum_uid     = 100
+virtual_uid_maps        = static:5000      # например, uid=vmail:5000
+virtual_gid_maps        = static:5000      # gid=vmail:5000
+virtual_transport       = lmtp:unix:private/dovecot-lmtp
+
+smtpd_use_tls = yes
+smtpd_tls_cert_file = /etc/ssl/local/mail.zone02.org.crt
+smtpd_tls_key_file  = /etc/ssl/local/mail.zone02.org.key
+smtpd_tls_CAfile    = /etc/ssl/local/planet-ca.crt
+smtpd_tls_security_level = may
+smtp_tls_security_level = may
+
+smtpd_sasl_type = dovecot
+smtpd_sasl_path = private/auth
+smtpd_sasl_auth_enable = yes
+smtpd_sasl_security_options = noanonymous
+smtpd_sasl_local_domain = zone02.org

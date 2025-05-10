@@ -8,7 +8,7 @@ services:
         MAIL_HOSTNAME: mail.planet.edu
     container_name: vm1
     privileged: true
-    command: sleep infinity
+    # command: sleep infinity
     networks:
       vnet1:
         ipv4_address: 192.168.102.10
@@ -21,7 +21,7 @@ services:
         MAIL_HOSTNAME: mail.zone02.org
     container_name: vm2
     privileged: true
-    command: sleep infinity
+    # command: sleep infinity
     networks:
       vnet1:
         ipv4_address: 192.168.102.20
