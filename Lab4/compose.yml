@@ -1,0 +1,41 @@
+services:
+  vm1:
+    build: ./vm1
+    container_name: vm1
+    hostname: ftp.planet.edu
+    privileged: true
+    networks:
+      vnet1:
+        ipv4_address: 192.168.102.10
+        aliases:
+          - ftp.planet.edu
+    dns:
+      - 8.8.8.8
+    volumes:
+      - ftp_data:/srv/ftp
+      - ftp_users:/home
+    
+  vm2:
+    depends_on:
+      - vm1
+    build: ./vm2
+    container_name: vm2
+    privileged: true
+    command: sleep infinity
+    networks:
+      vnet1:
+        ipv4_address: 192.168.102.20
+    dns:
+      - 8.8.8.8
+
+networks:
+  vnet1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.102.0/24
+          gateway: 192.168.102.1
+
+volumes:
+  ftp_data:
+  ftp_users:
