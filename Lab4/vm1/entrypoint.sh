@@ -6,28 +6,26 @@ mkdir -p /srv/ftp/incoming
 
 chown ftp:ftp /srv/ftp/*
 chmod 555 /srv/ftp/pub
-chmod 773 /srv/ftp/incoming
+chmod 777 /srv/ftp/incoming
 
-mkuser () {
-    local name="$1" pass="pass" mode="$2" homedir="/home/$name"
+# Create FTP users
+for u in mercury venus earth saturn jupiter; do
+    adduser --disabled-password --gecos "" $u
+    echo "$u:pass" | chpasswd
+done
 
-    adduser --disabled-password --gecos "" "$name"
-    echo "$name:$pass" | chpasswd
+# Set up readonly access
+for u in mercury venus saturn; do
+    chown root:root "/home/$u"
+    chmod 555 "/home/$u"
+done
 
-    if [[ "$mode" == "ro" ]]; then
-        chown root:root "$homedir"
-        chmod 555       "$homedir"
-    else
-        chown "$name:$name" "$homedir"
-        chmod 755           "$homedir"
-    fi
-}
+# Set up read-write access
+for u in earth jupiter; do
+    chown "$u:$u" "/home/$u"
+    chmod 755 "/home/$u"
+done
 
-mkuser mercury  ro
-mkuser venus    ro
-mkuser earth    rw
-mkuser saturn   ro
-mkuser jupiter  rw
 
 mkdir -p /etc/vsftpd
 printf "venus\njupiter\n" > /etc/vsftpd/chroot_list
