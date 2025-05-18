@@ -1,0 +1,37 @@
+services:
+  vm1:
+    build: ./vm1
+    container_name: vm1
+    privileged: true
+    networks:
+      vnet1:
+        ipv4_address: 192.168.102.10
+        aliases:
+          - nfs.planet.edu
+    volumes:
+      - ./vm1/exports:/etc/exports:ro
+      - nfsdata:/nfs
+    dns:
+      - 8.8.8.8
+    
+  vm2:
+    build: ./vm2
+    container_name: vm2
+    privileged: true
+    command: sleep infinity
+    networks:
+      vnet1:
+        ipv4_address: 192.168.102.20
+    dns:
+      - 8.8.8.8
+
+networks:
+  vnet1:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.102.0/24
+          gateway: 192.168.102.1
+
+volumes:
+  nfsdata:
