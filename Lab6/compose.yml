@@ -1,6 +1,6 @@
 services:
   vm1:
-    build: .
+    build: ./vm1
     container_name: vm1
     privileged: true
     command: sleep infinity
@@ -11,7 +11,7 @@ services:
       - 8.8.8.8
     
   vm2:
-    build: .
+    build: ./vm2
     container_name: vm2
     privileged: true
     command: sleep infinity
