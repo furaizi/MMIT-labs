@@ -9,7 +9,7 @@ for u in mercury venus saturn guest; do
 
     # Samba users
     if [ "$u" = "guest" ]; then
-        smbpasswd -a -n "$u" || true
+        printf "\n\n" | smbpasswd -a -s "$u" || true
     else
         printf "pass\npass\n" | smbpasswd -a -s "$u" || true
     fi
