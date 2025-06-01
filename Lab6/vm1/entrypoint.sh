@@ -14,14 +14,11 @@ for u in mercury venus saturn guest; do
 done
 
 for d in hidden home public incoming; do
-    mkdir /srv/samba/"$d"
+    mkdir -p /srv/samba/"$d"
 done;
 
 chown -R root:root /srv/samba
-chmod -R 0770 /srv/samba/hidden
-chmod -R 0700 /srv/samba/home
-chmod -R 0555 /srv/samba/public
-chmod -R 0777 /srv/samba/incoming
+chmod -R 0777 /srv/samba
 
 nmbd -D
 smbd -D
