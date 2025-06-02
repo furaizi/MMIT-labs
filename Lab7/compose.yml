@@ -1,20 +1,23 @@
 services:
   vm1:
-    build: .
+    build: ./vm1
     container_name: vm1
     privileged: true
-    command: sleep infinity
     networks:
       vnet1:
         ipv4_address: 192.168.102.10
+        aliases:
+          - www.planet.edu
+    ports:
+      - "8082:8082"
+      - "8445:8445"
     dns:
       - 8.8.8.8
     
   vm2:
-    build: .
+    build: ./vm2
     container_name: vm2
     privileged: true
-    command: sleep infinity
     networks:
       vnet1:
         ipv4_address: 192.168.102.20
