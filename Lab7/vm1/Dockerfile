@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -y \
     openssl
 
 RUN mkdir -p /etc/nginx/ssl
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY certs/ /etc/nginx/ssl
+COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/index.html /var/www/index.html
 COPY entrypoint.sh /entrypoint.sh
 
