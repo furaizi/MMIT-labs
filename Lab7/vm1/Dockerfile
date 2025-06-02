@@ -10,7 +10,8 @@ RUN apt-get update && apt-get install -y \
     dnsutils \
     nginx \
     apache2-utils \
-    openssl
+    openssl \
+    curl
 
 RUN mkdir -p /etc/nginx/ssl
 COPY certs/ /etc/nginx/ssl
