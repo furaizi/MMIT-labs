@@ -17,8 +17,11 @@ RUN mkdir -p /etc/nginx/ssl
 COPY certs/ /etc/nginx/ssl
 COPY nginx/nginx.conf /etc/nginx/nginx.conf
 COPY nginx/index.html /var/www/index.html
-COPY entrypoint.sh /entrypoint.sh
+
+RUN update-ca-certificates && \
+    htpasswd -bc /etc/nginx/.htpasswd mercury pass && \
+    htpasswd -b /etc/nginx/.htpasswd venus pass && \
+    htpasswd -b /etc/nginx/.htpasswd earth pass
 
 EXPOSE 8082 8445
-ENTRYPOINT [ "/entrypoint.sh" ]
-CMD [ "sleep", "infinity" ]
+CMD ["nginx", "-g", "daemon off;"]
